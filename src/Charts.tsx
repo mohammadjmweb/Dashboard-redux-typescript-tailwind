@@ -169,31 +169,31 @@ const Charts:React.FC=()=>{
     return(
         <div className={` grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 px-6 bg-black text-white transition-all duration-300 ${isOpen ? 'md:ml-56' : 'md:ml-0'}`} >
             {/* Charts */}
-            <div className="border-2 border-blue-700 bg-blue-950 rounded-xl pt-4 px-4 pb-9 h-[400px] ">
+            <div className="border-2 border-gray-500 bg-gray-900 rounded-xl pt-4 px-4 pb-9 h-[400px] ">
                     <div className="flex justify-between text-xl font-semibold ">
                         <h2>Worldwide Sales</h2>
-                        <a href='' className='text-blue-500 hover:text-blue-700' >Show All</a>
+                        <a href='' className='text-gray-300 hover:text-gray-500' >Show All</a>
                     </div>
                     <Bar className='w-full' data={barData} options={barOptions} />
             </div>
-            <div className="border-2 border-blue-700 bg-blue-950 rounded-xl pt-4 px-4 pb-9 h-[400px]">
+            <div className="border-2 border-gray-500 bg-gray-900 rounded-xl pt-4 px-4 pb-9 h-[400px]">
                     <div className="flex justify-between text-xl font-semibold ">
                         <h2>Salse & Revenue</h2>
-                        <a href='' className='text-blue-500 hover:text-blue-700' >Show All</a>
+                        <a href='' className='text-gray-300 hover:text-gray-500' >Show All</a>
                     </div>
                     <Line className='w-full' data={lineData} options={lineOptions} />
             </div>
-            <div className="border-2 border-blue-700 bg-blue-950 rounded-xl pt-4 px-4 pb-9 h-[600px]">
+            <div className="border-2 border-gray-500 bg-gray-900 rounded-xl pt-4 px-4 pb-9 h-[600px]">
                     <div className="flex justify-between text-xl font-semibold ">
                         <h2>Salse & Revenue</h2>
-                        <a href='' className='text-blue-500 hover:text-blue-700' >Show All</a>
+                        <a href='' className='text-gray-300 hover:text-gray-500' >Show All</a>
                     </div>
                     <Pie className='w-full' data={pieData} options={pieOptions} />
             </div>
-            <div className="border-2 border-blue-700 bg-blue-950 rounded-xl pt-4 px-4 pb-9 h-[600px]">
+            <div className="border-2 border-gray-500 bg-gray-900 rounded-xl pt-4 px-4 pb-9 h-[600px]">
                     <div className="flex justify-between text-xl font-semibold ">
                         <h2>Salse & Revenue</h2>
-                        <a href='' className='text-blue-500 hover:text-blue-700' >Show All</a>
+                        <a href='' className='text-gray-300 hover:text-gray-500' >Show All</a>
                     </div>
                     <Doughnut className='w-full' data={doughnutData} options={doughnutOptions} />
             </div>

@@ -19,10 +19,10 @@ const Header:React.FC=()=>{
     }
 
     return(
-        <div className={`flex justify-between items-center p-4 bg-gray-900 transition-all duration-300 text-white h-[64px] z-20 sticky top-0 border-b-2 border-blue-700 ${isOpen ? 'md:ml-56' : 'md:ml-0'}`}>
+        <div className={`flex justify-between items-center p-4 bg-gray-900 transition-all duration-300 text-white h-[64px] sticky top-0 z-20 border-b-2 border-gray-500 ${isOpen ? 'md:ml-56' : 'md:ml-0'}`}>
             <div className="flex items-center">
                 <FaUserEdit className="text-4xl text-blue-500 block md:hidden mr-2 " />
-                <div className='cursor-pointer text-gray-500 text-2xl bg-black rounded-full p-2 mr-4 hover:text-gray-700 ' onClick={()=>dispatch(toggleSidebar())}> <FiMenu /> </div>
+                <div className='cursor-pointer text-gray-300 text-2xl bg-black rounded-full p-2 mr-4 hover:text-gray-500 ' onClick={()=>dispatch(toggleSidebar())}> <FiMenu /> </div>
                 <input type="search" name="" id="" className='bg-black outline-none px-2 py-1 rounded-lg hidden md:block '/>
             </div>
                
@@ -40,7 +40,7 @@ const Header:React.FC=()=>{
                         )}
                     </button>
                     {activeMenu === 1 && (
-                        <div className="absolute top-[51px] left-[-32px] w-[250px] bg-gray-900 border-2 border-gray-700 rounded-b-lg border-t-transparent ">
+                        <div className="absolute top-[51px] left-[-32px] w-[250px] bg-gray-900 border-2 border-gray-500 rounded-b-lg border-t-transparent ">
                             <div className="flex p-2 hover:bg-black ">
                                     <img className="w-[70px] h-[70px] mr-2 rounded-full" src={userImg} alt="" />
                                     <div className="flex flex-col">
@@ -82,7 +82,7 @@ const Header:React.FC=()=>{
                         )}
                     </button>
                     {activeMenu === 2 && (
-                        <div className="absolute top-[51px] right-0 w-[160px] bg-gray-900 border-2 border-gray-700 rounded-b-lg border-t-transparent ">
+                        <div className="absolute top-[51px] right-0 w-[160px] bg-gray-900 border-2 border-gray-500 rounded-b-lg border-t-transparent ">
                             <div className="flex flex-col hover:bg-black p-2">
                                 <h2 className="text-white font-bold ">profile updated</h2>
                                 <h2 className="text-gray-400">15 minutes ago</h2>
@@ -113,7 +113,7 @@ const Header:React.FC=()=>{
                         )}
                     </button>
                     {activeMenu === 3 && (
-                        <div className="absolute top-[55px] right-0 w-[150px] bg-gray-900 border-2 border-gray-700 rounded-b-lg border-t-transparent py-2">
+                        <div className="absolute top-[55px] right-0 w-[150px] bg-gray-900 border-2 border-gray-500 rounded-b-lg border-t-transparent py-2">
                             <h2 className="text-gray-400 hover:bg-black px-2 text text-center">My Profile</h2>
                             <h2 className="text-gray-400 hover:bg-black px-2 text text-center">Settings</h2>
                             <h2 className="text-gray-400 hover:bg-black px-2 text text-center">Log Out</h2>

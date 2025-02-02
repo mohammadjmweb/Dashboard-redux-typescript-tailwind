@@ -50,7 +50,7 @@ const Dashboard:React.FC=()=>{
     useEffect(()=>{
         const interval=setInterval(()=>{
             nextSlide()    
-        } ,2000)
+        } ,5000)
         return ()=> clearInterval(interval)
     },[])
 
@@ -105,45 +105,45 @@ weeks.push(currentWeek)
     return(
         <div className={` transition-all duration-300 bg-black text-white ${isOpen ? 'md:ml-56' : 'md:ml-0'} `} >
             {/* Image Slider */}
-            <div className='grid grid-cols-1 m-6 border-2 border-blue-700 rounded-xl h-[250px] md:h-[500px] relative px-12 pt-6 md:p-0' >    
+            <div className='grid grid-cols-1 m-6 border-2 border-gray-500 rounded-xl h-[250px] md:h-[500px] relative px-12 pt-6 md:p-0 bg-gray-900' >    
                 <div className="relative w-full md:w-3/4 m-auto overflow-hidden h-[300px] md:h-[450px]">
                     <div className="flex transition-transform duration-500 h-[300px] md:h-[450px] " style={{transform:`translateX(-${currentIndex*100}%)`} as React.CSSProperties} >
                         {images.map((image,index)=>(
                             <div key={index} className='flex-shrink-0 w-full h-[300px] md:h-[450px] relative'>
                                 <img src={image.src} alt={`Slide ${index}`} className='h-[200px] md:h-[450px] w-full' />
-                                <p className='text-center text-blue-950 font-bold bg-blue-500 text-xl mt-2 absolute bottom-28 md:bottom-4 left-[37%] md:left-[45%] w-[100px] p-2 rounded-lg' >{image.caption}</p> 
+                                <p className='text-center text-blue-950 font-bold bg-gray-500 text-xl mt-2 absolute bottom-28 md:bottom-4 left-[37%] md:left-[45%] w-[100px] p-2 rounded-lg' >{image.caption}</p> 
                             </div>
                         ))}
                     </div>
                 </div>
-                <button onClick={prevSlide} className='absolute text-4xl left-[4%] md:left-[10%] top-1/2 transform -translate-y-1/2 bg-blue-700 text-white p-3 rounded-full'><FaArrowLeft/></button>
-                <button onClick={nextSlide} className='absolute text-4xl right-[4%] md:right-[10%] top-1/2 transform -translate-y-1/2 bg-blue-700 text-white p-3 rounded-full'><FaArrowRight/></button>
+                <button onClick={prevSlide} className='absolute text-4xl left-[4%] md:left-[10%] top-1/2 transform -translate-y-1/2 bg-gray-500 text-white p-3 rounded-full'><FaArrowLeft/></button>
+                <button onClick={nextSlide} className='absolute text-4xl right-[4%] md:right-[10%] top-1/2 transform -translate-y-1/2 bg-gray-500 text-white p-3 rounded-full'><FaArrowRight/></button>
             </div>
             
             {/* Mini Carts */}
             <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-6 px-6 my-6 '>
-                <div className="bg-blue-950 border-2 border-blue-700 p-4 rounded-xl shadow flex justify-between items-center ">
+                <div className="bg-gray-900 border-2 border-gray-500 p-4 rounded-xl shadow flex justify-between items-center ">
                     <FaChartLine className='text-6xl' />
                     <div className="flex flex-col text-xl justify-between">
                         <h2>Today Sale</h2>
                         <h2>$1234</h2>
                     </div>
                 </div>
-                <div className="bg-blue-950 border-2 border-blue-700 p-4 rounded-xl shadow flex justify-between items-center ">
+                <div className="bg-gray-900 border-2 border-gray-500 p-4 rounded-xl shadow flex justify-between items-center ">
                     <FaChartBar className='text-6xl' />
                     <div className="flex flex-col text-xl justify-between">
                         <h2>Total Sale</h2>
                         <h2>$1234</h2>
                     </div>
                 </div>
-                <div className="bg-blue-950 border-2 border-blue-700 p-4 rounded-xl shadow flex justify-between items-center ">
+                <div className="bg-gray-900 border-2 border-gray-500 p-4 rounded-xl shadow flex justify-between items-center ">
                     <FaChartArea className='text-6xl' />
                     <div className="flex flex-col text-xl justify-between">
                         <h2>Today Revenue</h2>
                         <h2>$1234</h2>
                     </div>
                 </div>
-                <div className="bg-blue-950 border-2 border-blue-700 p-4 rounded-xl shadow flex justify-between items-center ">
+                <div className="bg-gray-900 border-2 border-gray-500 p-4 rounded-xl shadow flex justify-between items-center ">
                     <FaChartPie className='text-6xl' />
                     <div className="flex flex-col text-xl justify-between">
                         <h2>Total Revenue</h2>
@@ -154,14 +154,14 @@ weeks.push(currentWeek)
         
             {/* Users Table */}
             <div className="grid grid-cols-1 px-4 my-6 px-6 ">
-                <div className='bg-blue-950 border-2 border-blue-700 rounded-xl p-4' >
+                <div className='bg-gray-900 border-2 border-gray-500 rounded-xl p-4' >
                     <div className="flex justify-between text-xl font-semibold mb-2">
                         <h2>Users information</h2>
-                        <a href='' className='text-blue-500 hover:text-blue-700' >Show All</a>
+                        <a href='' className='text-gray-300 hover:text-gray-500' >Show All</a>
                     </div>
-                    <table className='text-center w-full border-2 border-blue-700  ' >
+                    <table className='text-center w-full border-2 border-gray-500  ' >
                         <thead>
-                            <tr className='border-2 border-gray-400 bg-blue-900 ' >
+                            <tr className='border-2 border-gray-400 bg-gray-700 ' >
                                 <th className='border-2 border-gray-400 p-2 ' >id</th>
                                 <th className='border-2 border-gray-400 p-2' >name</th>
                                 <th className='border-2 border-gray-400 p-2' >username</th>
@@ -170,7 +170,7 @@ weeks.push(currentWeek)
                         </thead>
                         <tbody> 
                             {users.slice(0,5).map(user=>(
-                                <tr className='border-2 border-gray-400 bg-blue-900 hover:bg-blue-950 '  key={user.id}>
+                                <tr className='border-2 border-gray-400 bg-gray-700 hover:bg-gray-900 '  key={user.id}>
                                     <td className='border-2 border-gray-400 p-2' >{user.id}</td>
                                     <td className='border-2 border-gray-400' >{user.name}</td>
                                     <td className='border-2 border-gray-400' >{user.username}</td>
@@ -183,10 +183,10 @@ weeks.push(currentWeek)
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 px-6 gap-6">
                 {/* Messages */}
-                <div className='bg-blue-950 border-2 border-blue-700 rounded-xl p-4 ' >
+                <div className='bg-gray-900 border-2 border-gray-500 rounded-xl p-4 ' >
                     <div className="flex justify-between text-xl font-semibold mb-2">
                         <h2>Users information</h2>
-                        <a href='' className='text-blue-500 hover:text-blue-700' >Show All</a>
+                        <a href='' className='text-gray-300 hover:text-gray-500' >Show All</a>
                     </div>
                     <div className='flex my-4 '>
                         <img src={userImg} alt="" className='w-[15%] rounded-full mr-2 ' />
@@ -233,10 +233,10 @@ weeks.push(currentWeek)
                     </div>
                 </div>
                 {/* Calendar */}
-                <div className='bg-blue-950 border-2 border-blue-700 p-4 rounded-xl '>
+                <div className='bg-gray-900 border-2 border-gray-500 p-4 rounded-xl '>
                     <div className="flex justify-between text-xl font-semibold mb-2">
                         <h2>Calendar</h2>
-                        <a href='' className='text-blue-500 hover:text-blue-700' >Show All</a>
+                        <a href='' className='text-gray-300 hover:text-gray-500' >Show All</a>
                     </div>
                     <div className="flex justify-between px-4 mb-3 text-2xl  ">
                         <button className=' hover:bg-gray-300 hover:text-blue-950 p-1 rounded-lg ' onClick={()=>setCurrentDate(addMonths(currentDate,-1))}><FaArrowLeft/></button>
@@ -256,7 +256,7 @@ weeks.push(currentWeek)
                             {weeks.map((week,index)=>(
                                 <tr className='border-collapse' key={index}>
                                     {week.map(day=>(
-                                        <td key={day.toString()}  className={`text-gray-300 rounded-lg p-1 cursor-pointer hover:bg-gray-300 hover:text-blue-950 border-collapse ${isToday(day) ? 'bg-blue-700' : ''}`} >
+                                        <td key={day.toString()}  className={`text-gray-300 rounded-lg p-1 cursor-pointer hover:bg-gray-300 hover:text-blue-950 border-collapse ${isToday(day) ? 'bg-gray-500' : ''}`} >
                                             {day.getDate()}
                                         </td>
                                     ))}
@@ -267,14 +267,14 @@ weeks.push(currentWeek)
                     </table>
                 </div>
                 {/* To Do List */}
-                <div className="bg-blue-950 border-2 border-blue-700 p-4 rounded-xl">
+                <div className="bg-gray-900 border-2 border-gray-500 p-4 rounded-xl">
                     <div className="flex justify-between text-xl font-semibold mb-4">
                         <h2>To Do List</h2>
-                        <a href='' className='text-blue-500 hover:text-blue-700' >Show All</a>
+                        <a href='' className='text-gray-300 hover:text-gray-500' >Show All</a>
                     </div>
                     <table className='text-center w-full ' >
                         <thead>
-                            <tr className='border-2 border-gray-400 bg-blue-900 ' >
+                            <tr className='border-2 border-gray-400 bg-gray-700 ' >
                                 <th className='border-2 border-gray-400 p-1 ' >id</th>
                                 <th className='border-2 border-gray-400 p-1' >title</th>
                                 <th className='border-2 border-gray-400 p-1' >completed</th>
@@ -282,7 +282,7 @@ weeks.push(currentWeek)
                         </thead>
                         <tbody>
                             {todos.slice(0,5).map(todo=>(
-                                <tr key={todo.id} className='border-2 border-gray-400 bg-blue-900 hover:bg-blue-950 ' >
+                                <tr key={todo.id} className='border-2 border-gray-400 bg-gray-700 hover:bg-gray-900 ' >
                                     <td className='border-2 border-gray-400' >{todo.id}</td>
                                     <td className='border-2 border-gray-400' >{todo.title}</td>
                                     <td className='text-center border-2 border-gray-400 ' >
